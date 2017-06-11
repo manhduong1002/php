@@ -1,0 +1,55 @@
+ * { margin: 0; padding: 0;}
+        #wrapper {
+            width: 800px;
+            margin: 40px auto;
+        }
+        
+        a {
+            color: green;
+            text-decoration: none;
+        }
+        
+      .boxes   a:hover, .boxes a:visited {
+            color: maroon;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .boxes {
+            width: 270px;
+            border: 1px solid gray;
+            padding: 0px; margin: 0px 0px 0px 0px;
+            background: white;
+        }
+        
+        .boxes h2 {
+            padding: 10px;
+            color: white;
+        	font-size: 1.8em;
+            background: url(images/cat_bg.jpg) repeat-x top left scroll;
+            
+        }
+        
+        .boxes ul {
+            list-style: none;
+            padding: 10px 10px 10px 10px;
+        }
+        
+        .boxes ul li {
+            position: relative;
+            border-bottom: 1px solid #ebebeb;
+        }
+        
+        .boxes ul li a {
+            font-size: 1.1em;
+            color: #176092;
+            line-height: 2em;
+        }
+        
+        .boxes ul li:hover {
+            background: #eee;
+        }
+            
+      
