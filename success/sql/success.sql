@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2017 at 11:15 PM
+-- Generation Time: Jun 12, 2017 at 02:07 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -197,7 +197,18 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (76, 4, '22:00:00', '10/06/2017', '05:30:00', '10/06/2017', 'Thứ 7', 'Chốt diễn lễ, 10 điều đại nguyện', 75, 3, 7),
 (77, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Đi siêu thị mua một số đồ', 58, 3, 8),
 (78, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Học viết tiếng Trung', 60, 1, 8),
-(79, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Học thuộc các đoạn khai thị tiếng Trung', 65, 0, 8);
+(79, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Học thuộc các đoạn khai thị tiếng Trung', 65, 0, 8),
+(80, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Soạn khai thị tiếng Trung', 60, 1, 8),
+(81, 1, '22:00:00', '31/08/2017', '05:30:00', '01/07/2017', 'Quý III', 'Độ bố mẹ đi cầu ĐẠO', 2, 0, 3),
+(82, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Thuyết phục bố mẹ đi cầu ĐẠO', 81, 0, 7),
+(83, 2, '22:00:00', '31/08/2017', '05:30:00', '01/08/2017', 'Tháng 8', 'Đưa bố mẹ đi cầu ĐẠO', 81, 0, 8),
+(84, 3, '22:00:00', '02/07/2017', '05:30:00', '25/06/2017', 'Tuần I', 'Mua chữ tâm, mua tranh Quan Thế Âm Bồ Tát', 82, 0, 1),
+(85, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ôn luyện khai thị, tam bảo', 15, 0, 3),
+(86, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần IV', 'Ôn luyện diễn lễ, 10 điều đại nguyện', 12, 0, 4),
+(87, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc phật quy lễ tiết phần Lễ Sóc Vọng, ôn lại phần lễ hiến hương', 15, 0, 3),
+(88, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 6, 0, 3),
+(89, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ăn đầy đủ dưỡng chất', 57, 0, 3),
+(90, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Do hỏi và vào nhà con gái Bác Oanh Tố', 42, 0, 3);
 
 --
 -- Indexes for dumped tables
@@ -250,7 +261,7 @@ ALTER TABLE `tbl_material`
 -- AUTO_INCREMENT for table `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
