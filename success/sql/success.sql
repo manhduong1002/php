@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2017 at 02:07 AM
+-- Generation Time: Jun 12, 2017 at 06:09 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_config` (
 --
 
 INSERT INTO `tbl_config` (`Id`, `year`, `precious`, `month`, `week`, `day`, `thisday`) VALUES
-(1, 2017, 2, 6, 2, 8, '02/06/2017');
+(1, 2017, 2, 6, 3, 2, '02/06/2017');
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,8 @@ CREATE TABLE `tbl_food` (
 
 INSERT INTO `tbl_food` (`id`, `name`, `nature`, `image`, `start`, `doing`, `materials`) VALUES
 (1, 'Chả lá lốt', 'Khoái khẩu', '', 'Rửa lá lốt sạch, nhưng không vặt cuống đề cuống dài\r\nĐậu phụ 1 2 bánh tùy vào số lượng người ăn\r\nNgâm mộc nhĩ', 'Thái rất nhỏ lá lốt, thái nhỏ mộc nhĩ =>\r\nRầm nát đậu phụ các nguyên liệu được thái cộng thêm cho chút gia vị hạt nêm, muối, tiêu =>\r\nTrộn đều =>\r\n\r\nRán lên, chuẩn bị nước chấm ngon', 'Lá lốt, đậu phụ,mộc nhĩ'),
-(2, 'Nem thính', 'Khoái khẩu', '', 'Bột thính, đậu phụ thái cực nhỏ,nấm đùi gà chút gia vị\r\nRau sống hoặc lá sung, lá mơ, tương bần              ', 'Đậu phụ đưa vào rán mềm mềm vừa phải, để nguội thái nhỏ sợi  \r\nNấm đùi gà thái sợi sào qua ngấm gia vị\r\nTrộn chung với thính một đợt\r\nCho gia vị\r\nSau đó trộn đi trộn lại\r\nGói lá sau đó chấm tương bần ăn ôi ngon khoái khẩu quá đi                       ', 'Thính bột, đậu phụ, nấm đùi gà, lá sung(mơ), rau sống');
+(2, 'Nem thính', 'Khoái khẩu', '', 'Bột thính, đậu phụ thái cực nhỏ,nấm đùi gà chút gia vị\r\nRau sống hoặc lá sung, lá mơ, tương bần              ', 'Đậu phụ đưa vào rán mềm mềm vừa phải, để nguội thái nhỏ sợi  \r\nNấm đùi gà thái sợi sào qua ngấm gia vị\r\nTrộn chung với thính một đợt\r\nCho gia vị\r\nSau đó trộn đi trộn lại\r\nGói lá sau đó chấm tương bần ăn ôi ngon khoái khẩu quá đi                       ', 'Thính bột, đậu phụ, nấm đùi gà, lá sung(mơ), rau sống'),
+(3, 'Nem rán', 'Khoái khẩu', '', '2 của cà rốt to (4 củ nhỏ)\n1 củ xu hào nhỏ\n5 nghìn váng đậu\n2 nấm đùi gà\n1 bát con đỗ xanh\n1 nắm miến\n7 cái mộc nhĩ\n10 cây nấm hương\nMột bó rau thơm, xương sông nếu có                           ', 'tất cả nguyên liệu thái nhỏ, miến ngâm kĩ, mộc nhĩ ngâm kĩ, nấm hương ngâm kĩ, váng đậu ngâm nước lạnh kĩ, thái nhỏ trộn đều và cho chút gia vị muối, hạt nêm... nhạt nhạt\r\n\r\nQuấn nem để vô ngăn đá tủ lạnh\r\n\r\n=> Lấy ra rán thì ăn dần lửa nhỏ', '2 của cà rốt to (4 củ nhỏ) 1 củ xu hào nhỏ 5 nghìn váng đậu 2 nấm đùi gà 1 bát con đỗ xanh 1 nắm miến 7 cái mộc nhĩ 10 cây nấm hương Một bó rau thơm, xương sông nếu có                           ');
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,14 @@ INSERT INTO `tbl_material` (`id`, `name`, `selection`, `color`, `nutrients`) VAL
 (6, 'Nấm đùi gà', 'Nấm đùi gà to', 'Trắng, đen', 'Cao'),
 (7, 'Lá sung', 'Lá sung to đẹp ', 'Xanh', 'Vừa phải'),
 (8, 'Lá mơ', 'Lá mơ xanh to', 'Xanh', 'Vừa phải'),
-(9, 'Rau sống', 'Rau sống đầy đủ', 'Xanh', 'Vừa phải');
+(9, 'Rau sống', 'Rau sống đầy đủ', 'Xanh', 'Vừa phải'),
+(10, 'Lá xương sông', 'Lá xương sông xanh', 'Xanh', 'Vừa phải'),
+(11, 'Cà rốt', 'Cà rốt to đẹp', 'Da cam', 'Vừa phải'),
+(12, 'Củ xu hào', 'Củ xu hào to đep', 'Xanh', 'Vừa phải'),
+(13, 'Váng đậu', 'Váng đậu vàng đẹp', 'Vàng', 'Vừa phải'),
+(14, 'Đỗ xanh (Đậu xanh)', 'Đậu xanh đẹp', 'Xanh', 'Cao'),
+(15, 'Miến', 'Nắm miến đẹp trắng', 'Trắng', 'Vừa phải'),
+(16, 'Nấm hương', 'Nấm hương thơm đẹp', 'Đen', 'Vừa phải');
 
 -- --------------------------------------------------------
 
@@ -130,13 +138,13 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (7, 1, '22:00:00', '15/08/2017', '05:30:00', '01/06/2017', 'Quý II', 'Mua tủ lạnh + Giàn tập thể hình', 4, 1, 2),
 (8, 2, '22:00:00', '30/06/2017', '05:30:00', '01/06/2017', 'Tháng 6', 'Mua tủ lạnh', 7, 1, 6),
 (9, 3, '22:00:00', '04/06/2017', '05:30:00', '01/06/2017', 'Tuần I', 'Mua tủ lạnh', 8, 3, 1),
-(10, 3, '22:00:00', '04/06/2017', '05:30:00', '29/05/2017', 'Tuần I', 'Soạn viết tiếng trung, học thuộc hai đoạn khai thị tiếng trung', 6, 1, 1),
+(10, 3, '22:00:00', '04/06/2017', '05:30:00', '29/05/2017', 'Tuần I', 'Soạn viết tiếng trung, học thuộc hai đoạn khai thị tiếng trung', 6, 3, 1),
 (11, 1, '22:00:00', '31/07/2017', '05:30:00', '29/05/2017', 'Quý II', 'Khai thị, tam bảo tự tin, soạn 10 điều đại nguyện, diễn lễ', 2, 1, 2),
 (12, 2, '22:00:00', '30/06/2017', '05:30:00', '29/05/2017', 'Tháng 6', 'Soạn diễn lễ, 10 điều đại nguyện ôn khai thị', 11, 1, 6),
 (13, 3, '22:00:00', '04/06/2017', '05:30:00', '29/05/2017', 'Tuần I', 'Soạn diễn lễ, dàn ý 10 điều đại nguyện', 12, 3, 1),
 (14, 1, '22:00:00', '30/07/2017', '05:30:00', '29/05/2017', 'Quý II', 'Chuẩn bị tốt mọi thứ trước khi thực hiện', 4, 1, 2),
 (15, 2, '22:00:00', '30/06/2017', '05:30:00', '29/05/2017', 'Tháng 6', 'Chuẩn bị tốt mọi thứ trước khi thực hiện', 14, 1, 6),
-(16, 3, '22:00:00', '04/06/2017', '05:30:00', '29/05/2017', 'Tuần I', 'Chuẩn bị tốt mọi thứ trước khi thực hiện', 15, 1, 1),
+(16, 3, '22:00:00', '04/06/2017', '05:30:00', '29/05/2017', 'Tuần I', 'Chuẩn bị tốt mọi thứ trước khi thực hiện', 15, 3, 1),
 (17, 4, '22:00:00', '29/05/2017', '05:30:00', '29/05/2017', 'Thứ 2', 'Chuẩn bị trang phục, cơm, ... trước khi đi làm', 16, 3, 2),
 (18, 4, '22:00:00', '29/05/2017', '05:30:00', '29/05/2017', 'Thứ 2', 'Học thuộc đoạn 1 khai thị', 0, 3, 2),
 (19, 4, '22:00:00', '29/05/2017', '05:30:00', '29/05/2017', 'Thứ 2', 'Soạn tiếng trung', 10, 3, 2),
@@ -156,16 +164,16 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (34, 0, '22:00:00', '30/11/2017', '05:30:00', '01/06/2017', 'Năm 2017', 'Tăng tiền lương chân trong, và chân ngoài', 0, 1, 2017),
 (35, 1, '22:00:00', '31/08/2017', '05:30:00', '01/06/2017', 'Quý II', 'Thiết lập các tên miền và source web cho chân ngoài', 34, 1, 2),
 (36, 2, '22:00:00', '30/06/2017', '05:30:00', '01/06/2017', 'Tháng 6', 'Thiết lập tên miền web thanhtungitc.com và source', 35, 1, 6),
-(37, 3, '22:00:00', '04/06/2017', '05:30:00', '01/06/2017', 'Tuần I', 'Thiết lập tên miền thanhtungitc.com', 36, 1, 1),
-(38, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Viết source cho tên miền thanhtungitc.com', 36, 1, 2),
+(37, 3, '22:00:00', '04/06/2017', '05:30:00', '01/06/2017', 'Tuần I', 'Thiết lập tên miền thanhtungitc.com', 36, 3, 1),
+(38, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Viết source cho tên miền thanhtungitc.com', 36, 3, 2),
 (39, 4, '22:00:00', '02/06/2017', '05:30:00', '02/06/2017', 'Thứ 6', 'Soạn 20 từ tiếng trung trong khai thị', 10, 3, 6),
 (40, 4, '22:00:00', '02/06/2017', '05:30:00', '02/06/2017', 'Thứ 6', 'Học thuộc đoạn 2 khai thị', 10, 3, 6),
 (41, 1, '22:00:00', '30/07/2017', '05:30:00', '01/06/2017', 'Quý II', 'Chốt người yêu lý tưởng trong lòng mình', 3, 1, 2),
 (42, 2, '22:00:00', '30/06/2017', '05:30:00', '01/06/2017', 'Tháng 6', 'Gặp và chào hỏi tìm hiểu những người con gái trong làng', 41, 1, 6),
-(43, 3, '22:00:00', '04/06/2017', '05:30:00', '01/06/2017', 'Tuần I', 'Cuối tuần đi bộ khắp làng để dò hỏi đối tượng cần gặp', 42, 1, 1),
+(43, 3, '22:00:00', '04/06/2017', '05:30:00', '01/06/2017', 'Tuần I', 'Cuối tuần đi bộ khắp làng để dò hỏi đối tượng cần gặp', 42, 3, 1),
 (44, 4, '18:00:00', '03/06/2017', '16:30:00', '03/06/2017', 'Thứ 7', 'Đi dạo một vòng quanh làng', 43, 3, 7),
 (45, 4, '18:00:00', '04/06/2017', '16:30:00', '04/06/2017', 'Chủ nhật', 'Đi dạo một vòng quanh làng', 43, 3, 8),
-(46, 3, '18:00:00', '04/06/2017', '05:30:00', '01/06/2017', 'Tuần I', 'Dọn dẹp nhà cửa', 15, 1, 1),
+(46, 3, '18:00:00', '04/06/2017', '05:30:00', '01/06/2017', 'Tuần I', 'Dọn dẹp nhà cửa', 15, 3, 1),
 (47, 4, '22:00:00', '04/06/2017', '05:30:00', '04/06/2017', 'Chủ nhật', 'Dọn phòng làm việc', 46, 3, 8),
 (48, 4, '22:00:00', '04/06/2017', '05:30:00', '04/06/2017', 'Chủ nhật', 'Dọn phỏng ngủ', 46, 3, 8),
 (49, 4, '22:00:00', '04/06/2017', '05:30:00', '04/06/2017', 'Chủ nhật', 'Dọn nhà vệ sinh', 46, 3, 8),
@@ -177,28 +185,28 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (55, 0, '22:00:00', '30/11/2017', '05:30:00', '05/06/2017', 'Năm 2017', 'Ít nhất 67 kg', 0, 1, 2017),
 (56, 1, '22:00:00', '30/07/2017', '05:30:00', '05/06/2017', 'Quý II', 'Ít nhất 60 kg', 55, 1, 2),
 (57, 2, '22:00:00', '30/06/2017', '05:30:00', '05/06/2017', 'Tháng 6', 'Ít nhất 58 kg', 56, 1, 6),
-(58, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Ăn đầy đủ dưỡng chất', 57, 1, 2),
-(60, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Học viết tiếng trung', 6, 1, 2),
-(61, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Soạn tiếng trung ', 6, 1, 2),
+(58, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Ăn đầy đủ dưỡng chất', 57, 3, 2),
+(60, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Học viết tiếng trung', 6, 3, 2),
+(61, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Soạn tiếng trung ', 6, 3, 2),
 (62, 4, '22:00:00', '05/06/2017', '05:30:00', '05/06/2017', 'Thứ 2', 'Ăn sữa chua, Uống sữa ngô, Ăn sữa chua, Uống sữa ngô, Uống sữa ngô, Tập thể hình', 58, 3, 2),
 (63, 4, '22:00:00', '05/06/2017', '05:30:00', '05/06/2017', 'Thứ 2', 'Học viết 5 từ đầu tiên', 60, 3, 2),
 (64, 4, '22:00:00', '05/06/2017', '05:30:00', '05/06/2017', 'Thứ 2', 'Soạn câu thứ 2 của Khai thị', 61, 3, 2),
-(65, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Học thuộc 5 đoạn khai thị tiếng trung', 6, 1, 2),
+(65, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Học thuộc 5 đoạn khai thị tiếng trung', 6, 3, 2),
 (66, 4, '22:00:00', '06/06/2017', '05:30:00', '06/06/2017', 'Thứ 3', 'Học thuộc 5 đoạn khai thị tiếng trung', 65, 3, 3),
-(67, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Lấy nguyên liệu nem và chả nấm', 15, 1, 2),
+(67, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Lấy nguyên liệu nem và chả nấm', 15, 3, 2),
 (68, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Thứ 7', 'Note nguyên liệu Nem và chả Nấm', 67, 3, 7),
 (69, 4, '22:00:00', '07/06/2017', '05:30:00', '07/06/2017', 'Thứ 4', 'Học viết 5 từ tiếp theo', 60, 3, 4),
 (70, 4, '22:00:00', '07/06/2017', '05:30:00', '07/06/2017', 'Thứ 4', 'Soạn câu thứ 3 của Khai thị', 61, 3, 4),
 (71, 1, '22:00:00', '30/11/2017', '05:30:00', '01/09/2017', 'Quý IV', 'Tỏ tình với nàng nhân ngày TẾT TRUNG THU', 3, 0, 4),
-(72, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Chuẩn bị tốt mọi thứ trước khi thực hiện', 15, 1, 2),
+(72, 3, '22:00:00', '11/06/2017', '05:30:00', '05/06/2017', 'Tuần II', 'Chuẩn bị tốt mọi thứ trước khi thực hiện', 15, 3, 2),
 (73, 4, '22:00:00', '08/06/2017', '05:30:00', '08/06/2017', 'Thứ 5', 'Tâm sự với các vị tiên phật, đi uống nước với Nhân', 72, 3, 5),
 (74, 4, '22:00:00', '09/06/2017', '05:30:00', '09/06/2017', 'Thứ 6', 'Đẩy source huuich.com', 38, 3, 6),
-(75, 3, '22:00:00', '10/06/2017', '05:30:00', '10/06/2017', 'Tuần II', 'Chốt diễn lễ, 10 điều đại nguyện', 12, 1, 2),
+(75, 3, '22:00:00', '10/06/2017', '05:30:00', '10/06/2017', 'Tuần II', 'Chốt diễn lễ, 10 điều đại nguyện', 12, 3, 2),
 (76, 4, '22:00:00', '10/06/2017', '05:30:00', '10/06/2017', 'Thứ 7', 'Chốt diễn lễ, 10 điều đại nguyện', 75, 3, 7),
 (77, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Đi siêu thị mua một số đồ', 58, 3, 8),
-(78, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Học viết tiếng Trung', 60, 1, 8),
-(79, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Học thuộc các đoạn khai thị tiếng Trung', 65, 0, 8),
-(80, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Soạn khai thị tiếng Trung', 60, 1, 8),
+(78, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Học viết tiếng Trung', 60, 3, 8),
+(79, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Học thuộc các đoạn khai thị tiếng Trung', 65, 3, 8),
+(80, 4, '22:00:00', '11/06/2017', '05:30:00', '11/06/2017', 'Chủ nhật', 'Soạn khai thị tiếng Trung', 60, 3, 8),
 (81, 1, '22:00:00', '31/08/2017', '05:30:00', '01/07/2017', 'Quý III', 'Độ bố mẹ đi cầu ĐẠO', 2, 0, 3),
 (82, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Thuyết phục bố mẹ đi cầu ĐẠO', 81, 0, 7),
 (83, 2, '22:00:00', '31/08/2017', '05:30:00', '01/08/2017', 'Tháng 8', 'Đưa bố mẹ đi cầu ĐẠO', 81, 0, 8),
@@ -208,7 +216,10 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (87, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc phật quy lễ tiết phần Lễ Sóc Vọng, ôn lại phần lễ hiến hương', 15, 0, 3),
 (88, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 6, 0, 3),
 (89, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ăn đầy đủ dưỡng chất', 57, 0, 3),
-(90, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Do hỏi và vào nhà con gái Bác Oanh Tố', 42, 0, 3);
+(90, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Do hỏi và vào nhà con gái Bác Oanh Tố', 42, 0, 3),
+(91, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ăn sữa ngô', 89, 0, 2),
+(92, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn tam bảo', 85, 0, 2),
+(93, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn lại các đoạn khai thị Tiếng Trung', 88, 0, 2);
 
 --
 -- Indexes for dumped tables
@@ -251,17 +262,17 @@ ALTER TABLE `tbl_config`
 -- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã món ăn', AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã món ăn', AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_material`
 --
 ALTER TABLE `tbl_material`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã nguyên vật liệu', AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã nguyên vật liệu', AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
