@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2017 at 06:09 AM
+-- Generation Time: Jun 13, 2017 at 06:04 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_config` (
 --
 
 INSERT INTO `tbl_config` (`Id`, `year`, `precious`, `month`, `week`, `day`, `thisday`) VALUES
-(1, 2017, 2, 6, 3, 2, '02/06/2017');
+(1, 2017, 2, 6, 3, 3, '02/06/2017');
 
 -- --------------------------------------------------------
 
@@ -211,15 +211,19 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (82, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Thuyết phục bố mẹ đi cầu ĐẠO', 81, 0, 7),
 (83, 2, '22:00:00', '31/08/2017', '05:30:00', '01/08/2017', 'Tháng 8', 'Đưa bố mẹ đi cầu ĐẠO', 81, 0, 8),
 (84, 3, '22:00:00', '02/07/2017', '05:30:00', '25/06/2017', 'Tuần I', 'Mua chữ tâm, mua tranh Quan Thế Âm Bồ Tát', 82, 0, 1),
-(85, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ôn luyện khai thị, tam bảo', 15, 0, 3),
+(85, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ôn luyện khai thị, tam bảo', 15, 1, 3),
 (86, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần IV', 'Ôn luyện diễn lễ, 10 điều đại nguyện', 12, 0, 4),
 (87, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc phật quy lễ tiết phần Lễ Sóc Vọng, ôn lại phần lễ hiến hương', 15, 0, 3),
-(88, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 6, 0, 3),
-(89, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ăn đầy đủ dưỡng chất', 57, 0, 3),
+(88, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 6, 1, 3),
+(89, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ăn đầy đủ dưỡng chất', 57, 1, 3),
 (90, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Do hỏi và vào nhà con gái Bác Oanh Tố', 42, 0, 3),
-(91, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ăn sữa ngô', 89, 0, 2),
-(92, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn tam bảo', 85, 0, 2),
-(93, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn lại các đoạn khai thị Tiếng Trung', 88, 0, 2);
+(91, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ăn sữa ngô', 89, 3, 2),
+(92, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn tam bảo', 85, 3, 2),
+(93, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn lại các đoạn khai thị Tiếng Trung', 88, 3, 2),
+(94, 4, '22:00:00', '13/06/2017', '05:30:00', '13/06/2017', 'Thứ 3', 'Ôn tam bảo', 85, 0, 3),
+(95, 4, '22:00:00', '13/06/2017', '05:30:00', '13/06/2017', 'Thứ 3', 'Ôn tập lễ tiết sóc vọng', 87, 0, 3),
+(96, 4, '22:00:00', '14/06/2017', '05:30:00', '14/06/2017', 'Thứ 4', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 88, 0, 4),
+(97, 4, '22:00:00', '14/06/2017', '05:30:00', '14/06/2017', 'Thứ 4', 'Ôn phật quy lễ tiết lễ Sóc Vọng', 87, 0, 4);
 
 --
 -- Indexes for dumped tables
@@ -272,7 +276,7 @@ ALTER TABLE `tbl_material`
 -- AUTO_INCREMENT for table `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
