@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 15, 2017 lúc 07:53 SA
+-- Thời gian đã tạo: Th6 16, 2017 lúc 06:13 SA
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 5.6.30
 
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_config` (
 --
 
 INSERT INTO `tbl_config` (`Id`, `year`, `precious`, `month`, `week`, `day`, `thisday`) VALUES
-(1, 2017, 2, 6, 3, 5, '02/06/2017');
+(1, 2017, 2, 6, 3, 6, '02/06/2017');
 
 -- --------------------------------------------------------
 
@@ -224,9 +224,13 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (95, 4, '22:00:00', '13/06/2017', '05:30:00', '13/06/2017', 'Thứ 3', 'Ôn tập lễ tiết sóc vọng', 87, 3, 3),
 (96, 4, '22:00:00', '14/06/2017', '05:30:00', '14/06/2017', 'Thứ 4', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 88, 3, 4),
 (97, 4, '22:00:00', '14/06/2017', '05:30:00', '14/06/2017', 'Thứ 4', 'Ôn phật quy lễ tiết lễ Sóc Vọng', 87, 3, 4),
-(98, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Ăn sữa đậu nành', 89, 0, 5),
-(99, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Học thuộc lễ sóc vọng', 87, 0, 5),
-(100, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 88, 0, 5);
+(98, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Ăn sữa đậu nành', 89, 3, 5),
+(99, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Học thuộc lễ sóc vọng', 87, 3, 5),
+(100, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 88, 3, 5),
+(101, 4, '22:00:00', '16/06/2017', '05:30:00', '16/06/2017', 'Thứ 6', 'Học thuộc 4 đoạn khai thị Tiếng Trung', 88, 0, 6),
+(102, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Học thuộc lễ hiến hương, hiến cung', 87, 0, 7),
+(103, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Mua sữa và một số món rau', 89, 0, 7),
+(104, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Ôn khai thị tam bảo', 85, 0, 7);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -279,7 +283,7 @@ ALTER TABLE `tbl_material`
 -- AUTO_INCREMENT cho bảng `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
