@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2017 at 05:41 AM
+-- Generation Time: Jun 18, 2017 at 07:54 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -228,11 +228,11 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (99, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Học thuộc lễ sóc vọng', 87, 3, 5),
 (100, 4, '22:00:00', '15/06/2017', '05:30:00', '15/06/2017', 'Thứ 5', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 88, 3, 5),
 (101, 4, '22:00:00', '16/06/2017', '05:30:00', '16/06/2017', 'Thứ 6', 'Học thuộc 4 đoạn khai thị Tiếng Trung', 88, 3, 6),
-(102, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Học thuộc lễ hiến hương, hiến cung', 87, 0, 7),
+(102, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Học thuộc lễ hiến hương, hiến cung', 87, 1, 7),
 (103, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Mua sữa và một số món rau', 89, 3, 7),
-(104, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Ôn khai thị tam bảo', 85, 0, 7),
-(105, 3, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Tuần III', 'Chuẩn bị source mục tiêu tốt', 15, 0, 3),
-(106, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Hoàn thành code next month', 105, 0, 7),
+(104, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Ôn khai thị tam bảo', 85, 1, 7),
+(105, 3, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Tuần III', 'Chuẩn bị source mục tiêu tốt', 15, 1, 3),
+(106, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Hoàn thành code next month', 105, 3, 7),
 (107, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Vào nhà bác Oanh Tố tìm hiểu con gái bác ấy', 90, 0, 8),
 (108, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Dọn nhà vệ sinh', 105, 0, 8),
 (109, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Dọn phòng làm việc', 105, 0, 8),
@@ -240,7 +240,19 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (111, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Học thuộc 4 đoạn khai thị Tiếng Trung', 88, 0, 8),
 (112, 0, '22:00:00', '30/11/2017', '05:30:00', '19/06/2017', 'Năm 2017', 'Quan tâm công cuộc dưỡng dục của Thầy Cô giáo', 0, 0, 2017),
 (113, 1, '22:00:00', '30/11/2017', '05:30:00', '01/09/2017', 'Quý IV', 'Đến thăm cô Thái nhân ngày nhà giáo Việt Nam', 112, 0, 4),
-(114, 0, '22:00:00', '30/11/2018', '05:30:00', '01/01/2018', 'Năm 2018', 'Quan tâm công cuộc dưỡng dục của Thầy Cô giáo', 0, 0, 2018);
+(114, 0, '22:00:00', '30/11/2018', '05:30:00', '01/01/2018', 'Năm 2018', 'Quan tâm công cuộc dưỡng dục của Thầy Cô giáo', 0, 0, 2018),
+(115, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Hoàn thành phần language cho Trung', 15, 0, 3),
+(116, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Tìm hiểu về tranh chữ Tâm và Tranh Quan Âm Bồ Tát', 15, 0, 4),
+(117, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học viết tiếng Trung', 6, 0, 4),
+(118, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Chốt lại xem đủ cân không có phải sửa gì không :)', 57, 0, 4),
+(119, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Hoàn thành phần language cho Trung', 115, 0, 8),
+(120, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Chuẩn bị các phần viết tiếng Trung cho cả tuần sau', 105, 0, 8),
+(121, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Ăn đầy đủ dưỡng chất', 57, 0, 4),
+(122, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Ôn luyện giảng diễn lễ', 86, 0, 3),
+(123, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn lại các từ tiếng Trung từ trước đến nay', 117, 0, 2),
+(124, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 6, 0, 4),
+(125, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn các đoạn khai thị tiếng trung từ trước đến nay', 124, 0, 2),
+(126, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 124, 0, 3);
 
 --
 -- Indexes for dumped tables
@@ -293,7 +305,7 @@ ALTER TABLE `tbl_material`
 -- AUTO_INCREMENT for table `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
