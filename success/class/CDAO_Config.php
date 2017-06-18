@@ -38,6 +38,15 @@ class CDAO_Config {
 		$this->updateConfig($CM_Config);
 	}
 	
+	public function nextMonth(){
+		$CM_Config = $this->getConfig();
+		$month = $CM_Config->Getmonth();
+		$month++;
+		$CM_Config->Setmonth($month);
+		$CM_Config->Setweek(1);
+		$this->updateConfig($CM_Config);
+	}
+	
 	public function nextWeek(){
 		$CM_Config = $this->getConfig();
 		$week = $CM_Config->Getweek();

@@ -96,4 +96,38 @@ class CDAO_Target {
 			}
 		}
 	}
+	
+	public function nextMonth($month){
+		$dataTarget = $this->getTargetByLevel(2,$month);
+		for($i=0;$i<count($dataTarget);$i++){
+			$dataTargetParent = $this->getTargetByParentId($dataTarget[$i]->GetId());
+			if(count($dataTargetParent) == 0){
+				$this->toFinish($dataTarget[$i]->GetId());
+			}
+			else {
+				for($j = 0; $j < count($dataTargetParent); $j++){
+					$this->toNew($dataTargetParent[$j]->GetId());
+				}
+				$dataTarget[$i]->SetThisconfig($month+1);
+				$this->updateTarget($dataTarget[$i]);
+			}
+		}
+	}
+	
+	public function nextPrecious($precious){
+		$dataTarget = $this->getTargetByLevel(1,$precious);
+		for($i=0;$i<count($dataTarget);$i++){
+			$dataTargetParent = $this->getTargetByParentId($dataTarget[$i]->GetId());
+			if(count($dataTargetParent) == 0){
+				$this->toFinish($dataTarget[$i]->GetId());
+			}
+			else {
+				for($j = 0; $j < count($dataTargetParent); $j++){
+					$this->toNew($dataTargetParent[$j]->GetId());
+				}
+				$dataTarget[$i]->SetThisconfig($precious+1);
+				$this->updateTarget($dataTarget[$i]);
+			}
+		}
+	}
  }?>

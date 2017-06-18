@@ -5,24 +5,22 @@ require_once('../class/CM_Config.php');
 require_once('../class/CM_Target.php');
 require_once('../class/CDAO_Config.php');
 require_once('../class/CDAO_Target.php');
-$page_title="Chọn tuần tiếp theo";
+$page_title="Chọn quý tiếp theo";
 $DAO = new DAO();
 $CDAO_Config = new CDAO_Config($DAO);
 $CDAO_Target = new CDAO_Target($DAO);
 
 if(isset($_POST['no'])){
-	$CDAO_Config->nextWeek();
+	$CDAO_Config->nextPrecious();
     if(!headers_sent()){
         header("Location:view_target.php");
     }
 }
 
 if(isset($_POST['yes'])){
-	$CDAO_Config->nextWeek();
-	$CM_Config = $CDAO_Config->getConfig();
-	$CDAO_Target->nextMonth($CM_Config->getMonth());
+	$CDAO_Config->nextPrecious();
     if(!headers_sent()){
-        header("Location:next_month.php");
+        header("Location:view_target.php");
     }
 }
 include('includes/ql_header.php');
@@ -33,7 +31,7 @@ include('includes/ql_header.php');
             ?>
             <div id="right">
                 <div id="sua_tt">
-                    <h2>Có chọn đến tháng tiếp theo không ?</h2>
+                    <h2>Có chọn đến năm tiếp theo không ?</h2>
                     <form id="suatl" action="" method="post">						
                         <p class="button">
                             <input type="submit" class="btn btn-primary" name="yes" id="yes" value="Đồng ý" />
