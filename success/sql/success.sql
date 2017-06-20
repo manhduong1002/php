@@ -2,10 +2,10 @@
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 18, 2017 at 10:58 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th6 20, 2017 lúc 06:32 SA
+-- Phiên bản máy phục vụ: 10.1.21-MariaDB
+-- Phiên bản PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `success`
+-- Cơ sở dữ liệu: `success`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_config`
+-- Cấu trúc bảng cho bảng `tbl_config`
 --
 
 CREATE TABLE `tbl_config` (
@@ -37,16 +37,16 @@ CREATE TABLE `tbl_config` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_config`
+-- Đang đổ dữ liệu cho bảng `tbl_config`
 --
 
 INSERT INTO `tbl_config` (`Id`, `year`, `precious`, `month`, `week`, `day`, `thisday`) VALUES
-(1, 2017, 2, 6, 3, 8, '02/06/2017');
+(1, 2017, 2, 6, 4, 3, '02/06/2017');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_food`
+-- Cấu trúc bảng cho bảng `tbl_food`
 --
 
 CREATE TABLE `tbl_food` (
@@ -60,7 +60,7 @@ CREATE TABLE `tbl_food` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_food`
+-- Đang đổ dữ liệu cho bảng `tbl_food`
 --
 
 INSERT INTO `tbl_food` (`id`, `name`, `nature`, `image`, `start`, `doing`, `materials`) VALUES
@@ -71,7 +71,7 @@ INSERT INTO `tbl_food` (`id`, `name`, `nature`, `image`, `start`, `doing`, `mate
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_material`
+-- Cấu trúc bảng cho bảng `tbl_material`
 --
 
 CREATE TABLE `tbl_material` (
@@ -83,7 +83,7 @@ CREATE TABLE `tbl_material` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_material`
+-- Đang đổ dữ liệu cho bảng `tbl_material`
 --
 
 INSERT INTO `tbl_material` (`id`, `name`, `selection`, `color`, `nutrients`) VALUES
@@ -107,7 +107,7 @@ INSERT INTO `tbl_material` (`id`, `name`, `selection`, `color`, `nutrients`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_target`
+-- Cấu trúc bảng cho bảng `tbl_target`
 --
 
 CREATE TABLE `tbl_target` (
@@ -125,7 +125,7 @@ CREATE TABLE `tbl_target` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_target`
+-- Đang đổ dữ liệu cho bảng `tbl_target`
 --
 
 INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `startDateHours`, `startDateDay`, `title`, `name`, `parentId`, `status`, `thisconfig`) VALUES
@@ -211,12 +211,12 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (82, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Thuyết phục bố mẹ đi cầu ĐẠO', 81, 0, 7),
 (83, 2, '22:00:00', '31/08/2017', '05:30:00', '01/08/2017', 'Tháng 8', 'Đưa bố mẹ đi cầu ĐẠO', 81, 0, 8),
 (84, 3, '22:00:00', '02/07/2017', '05:30:00', '25/06/2017', 'Tuần I', 'Mua chữ tâm, mua tranh Quan Thế Âm Bồ Tát', 82, 0, 1),
-(85, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ôn luyện khai thị, tam bảo', 15, 1, 3),
+(85, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ôn luyện khai thị, tam bảo', 15, 3, 3),
 (86, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần IV', 'Ôn luyện diễn lễ, 10 điều đại nguyện', 12, 0, 4),
-(87, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc phật quy lễ tiết phần Lễ Sóc Vọng, ôn lại phần lễ hiến hương', 15, 1, 3),
-(88, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 6, 1, 3),
-(89, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ăn đầy đủ dưỡng chất', 57, 1, 3),
-(90, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Do hỏi và vào nhà con gái Bác Oanh Tố', 42, 0, 3),
+(87, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc phật quy lễ tiết phần Lễ Sóc Vọng, ôn lại phần lễ hiến hương', 15, 3, 3),
+(88, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 6, 3, 3),
+(89, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ăn đầy đủ dưỡng chất', 57, 3, 3),
+(90, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Do hỏi và vào nhà con gái Bác Oanh Tố', 42, 3, 3),
 (91, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ăn sữa ngô', 89, 3, 2),
 (92, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn tam bảo', 85, 3, 2),
 (93, 4, '22:00:00', '12/06/2017', '05:30:00', '12/06/2017', 'Thứ 2', 'Ôn lại các đoạn khai thị Tiếng Trung', 88, 3, 2),
@@ -231,78 +231,78 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (102, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Học thuộc lễ hiến hương, hiến cung', 87, 3, 7),
 (103, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Mua sữa và một số món rau', 89, 3, 7),
 (104, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Ôn khai thị tam bảo', 85, 3, 7),
-(105, 3, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Tuần III', 'Chuẩn bị source mục tiêu tốt', 15, 1, 3),
+(105, 3, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Tuần III', 'Chuẩn bị source mục tiêu tốt', 15, 3, 3),
 (106, 4, '22:00:00', '17/06/2017', '05:30:00', '17/06/2017', 'Thứ 7', 'Hoàn thành code next month', 105, 3, 7),
-(107, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Vào nhà bác Oanh Tố tìm hiểu con gái bác ấy', 90, 0, 8),
+(107, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Vào nhà bác Oanh Tố tìm hiểu con gái bác ấy', 90, 3, 8),
 (108, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Dọn nhà vệ sinh', 105, 3, 8),
 (109, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Dọn phòng làm việc', 105, 3, 8),
-(110, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Ôn tập phật quy lễ tiết', 87, 0, 8),
-(111, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Học thuộc 4 đoạn khai thị Tiếng Trung', 88, 0, 8),
+(110, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Ôn tập phật quy lễ tiết', 87, 3, 8),
+(111, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Học thuộc 4 đoạn khai thị Tiếng Trung', 88, 3, 8),
 (112, 0, '22:00:00', '30/11/2017', '05:30:00', '19/06/2017', 'Năm 2017', 'Quan tâm công cuộc dưỡng dục của Thầy Cô giáo', 0, 0, 2017),
 (113, 1, '22:00:00', '30/11/2017', '05:30:00', '01/09/2017', 'Quý IV', 'Đến thăm cô Thái nhân ngày nhà giáo Việt Nam', 112, 0, 4),
 (114, 0, '22:00:00', '30/11/2018', '05:30:00', '01/01/2018', 'Năm 2018', 'Quan tâm công cuộc dưỡng dục của Thầy Cô giáo', 0, 0, 2018),
-(115, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Hoàn thành phần language cho Trung', 15, 1, 3),
+(115, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Hoàn thành phần language cho Trung', 15, 3, 3),
 (116, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Tìm hiểu về tranh chữ Tâm và Tranh Quan Âm Bồ Tát', 15, 0, 4),
-(117, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học viết tiếng Trung', 6, 0, 4),
+(117, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học viết tiếng Trung', 6, 1, 4),
 (118, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Chốt lại xem đủ cân không có phải sửa gì không :)', 57, 0, 4),
-(119, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Hoàn thành phần language cho Trung', 115, 1, 8),
-(120, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Chuẩn bị các phần viết tiếng Trung cho cả tuần sau', 105, 0, 8),
+(119, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Hoàn thành phần language cho Trung', 115, 3, 8),
+(120, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Chuẩn bị các phần viết tiếng Trung cho cả tuần sau', 105, 3, 8),
 (121, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Ăn đầy đủ dưỡng chất', 57, 0, 4),
 (122, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Ôn luyện giảng diễn lễ', 86, 0, 3),
-(123, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn lại các từ tiếng Trung từ trước đến nay', 117, 0, 2),
-(124, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 6, 0, 4),
-(125, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn các đoạn khai thị tiếng trung từ trước đến nay', 124, 0, 2),
+(123, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn lại các từ tiếng Trung từ trước đến nay', 117, 3, 2),
+(124, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 6, 1, 4),
+(125, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn các đoạn khai thị tiếng trung từ trước đến nay', 124, 3, 2),
 (126, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 124, 0, 3);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_config`
+-- Chỉ mục cho bảng `tbl_config`
 --
 ALTER TABLE `tbl_config`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Indexes for table `tbl_food`
+-- Chỉ mục cho bảng `tbl_food`
 --
 ALTER TABLE `tbl_food`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_material`
+-- Chỉ mục cho bảng `tbl_material`
 --
 ALTER TABLE `tbl_material`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_target`
+-- Chỉ mục cho bảng `tbl_target`
 --
 ALTER TABLE `tbl_target`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_config`
+-- AUTO_INCREMENT cho bảng `tbl_config`
 --
 ALTER TABLE `tbl_config`
   MODIFY `Id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `tbl_food`
+-- AUTO_INCREMENT cho bảng `tbl_food`
 --
 ALTER TABLE `tbl_food`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã món ăn', AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `tbl_material`
+-- AUTO_INCREMENT cho bảng `tbl_material`
 --
 ALTER TABLE `tbl_material`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã nguyên vật liệu', AUTO_INCREMENT=17;
 --
--- AUTO_INCREMENT for table `tbl_target`
+-- AUTO_INCREMENT cho bảng `tbl_target`
 --
 ALTER TABLE `tbl_target`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
