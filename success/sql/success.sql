@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 20, 2017 lúc 06:32 SA
+-- Thời gian đã tạo: Th6 23, 2017 lúc 07:34 SA
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 5.6.30
 
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_config` (
 --
 
 INSERT INTO `tbl_config` (`Id`, `year`, `precious`, `month`, `week`, `day`, `thisday`) VALUES
-(1, 2017, 2, 6, 4, 3, '02/06/2017');
+(1, 2017, 2, 6, 4, 6, '02/06/2017');
 
 -- --------------------------------------------------------
 
@@ -212,7 +212,7 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (83, 2, '22:00:00', '31/08/2017', '05:30:00', '01/08/2017', 'Tháng 8', 'Đưa bố mẹ đi cầu ĐẠO', 81, 0, 8),
 (84, 3, '22:00:00', '02/07/2017', '05:30:00', '25/06/2017', 'Tuần I', 'Mua chữ tâm, mua tranh Quan Thế Âm Bồ Tát', 82, 0, 1),
 (85, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ôn luyện khai thị, tam bảo', 15, 3, 3),
-(86, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần IV', 'Ôn luyện diễn lễ, 10 điều đại nguyện', 12, 0, 4),
+(86, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần IV', 'Ôn luyện diễn lễ, 10 điều đại nguyện', 12, 1, 4),
 (87, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc phật quy lễ tiết phần Lễ Sóc Vọng, ôn lại phần lễ hiến hương', 15, 3, 3),
 (88, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Học thuộc 4 đoạn tiếng Trung Khai Thị', 6, 3, 3),
 (89, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Ăn đầy đủ dưỡng chất', 57, 3, 3),
@@ -242,17 +242,28 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (113, 1, '22:00:00', '30/11/2017', '05:30:00', '01/09/2017', 'Quý IV', 'Đến thăm cô Thái nhân ngày nhà giáo Việt Nam', 112, 0, 4),
 (114, 0, '22:00:00', '30/11/2018', '05:30:00', '01/01/2018', 'Năm 2018', 'Quan tâm công cuộc dưỡng dục của Thầy Cô giáo', 0, 0, 2018),
 (115, 3, '22:00:00', '18/06/2017', '05:30:00', '12/06/2017', 'Tuần III', 'Hoàn thành phần language cho Trung', 15, 3, 3),
-(116, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Tìm hiểu về tranh chữ Tâm và Tranh Quan Âm Bồ Tát', 15, 0, 4),
+(116, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Tìm hiểu về tranh chữ Tâm và Tranh Quan Âm Bồ Tát', 15, 1, 4),
 (117, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học viết tiếng Trung', 6, 1, 4),
 (118, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Chốt lại xem đủ cân không có phải sửa gì không :)', 57, 0, 4),
 (119, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Hoàn thành phần language cho Trung', 115, 3, 8),
 (120, 4, '22:00:00', '18/06/2017', '05:30:00', '18/06/2017', 'Chủ nhật', 'Chuẩn bị các phần viết tiếng Trung cho cả tuần sau', 105, 3, 8),
-(121, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Ăn đầy đủ dưỡng chất', 57, 0, 4),
-(122, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Ôn luyện giảng diễn lễ', 86, 0, 3),
+(121, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Ăn đầy đủ dưỡng chất', 57, 1, 4),
+(122, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Ôn luyện giảng diễn lễ', 86, 3, 3),
 (123, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn lại các từ tiếng Trung từ trước đến nay', 117, 3, 2),
 (124, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 6, 1, 4),
 (125, 4, '22:00:00', '19/06/2017', '05:30:00', '19/06/2017', 'Thứ 2', 'Ôn các đoạn khai thị tiếng trung từ trước đến nay', 124, 3, 2),
-(126, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 124, 0, 3);
+(126, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 124, 3, 3),
+(127, 4, '22:00:00', '21/06/2017', '05:30:00', '21/06/2017', 'Thứ 4', 'Học viết tiếng Trung hằng ngày', 117, 3, 4),
+(128, 4, '22:00:00', '21/06/2017', '05:30:00', '21/06/2017', 'Thứ 4', 'Học tiếng trung hàng tuần', 117, 3, 4),
+(129, 4, '22:00:00', '23/06/2017', '05:30:00', '23/06/2017', 'Thứ 6', 'Ăn sữa bí ngô', 121, 2, 6),
+(130, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Thiết lập các tên miền và source web cho chân ngoài', 4, 0, 3),
+(131, 2, '22:00:00', '30/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Viết thành công app trò chơi cho Long', 130, 0, 7),
+(132, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Tìm hiểu và đẩy quảng cáo vào app android', 131, 0, 1),
+(133, 3, '22:00:00', '09/07/2017', '05:30:00', '03/07/2017', 'Tuần II', 'Tạo ảnh gif bằng nhiều ảnh nhỏ (phân ảnh)', 131, 0, 2),
+(134, 3, '22:00:00', '16/07/2017', '05:30:00', '10/07/2017', 'Tuần III', 'Hoán vị các ảnh được một ảnh mới, tốc độ của ảnh', 131, 0, 3),
+(135, 3, '22:00:00', '23/07/2017', '05:30:00', '17/07/2017', 'Tuần IV', 'Fix bug nếu có và tạo bản verson 1', 131, 0, 4),
+(136, 3, '22:00:00', '30/07/2017', '05:30:00', '24/07/2017', 'Tuần V', 'Hoàn thiện và đưa Long bản demo', 131, 0, 5),
+(137, 4, '22:00:00', '22/06/2017', '05:30:00', '22/06/2017', 'Thứ 5', 'Tìm hiểu về tranh', 116, 3, 5);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -305,7 +316,7 @@ ALTER TABLE `tbl_material`
 -- AUTO_INCREMENT cho bảng `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
