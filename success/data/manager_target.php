@@ -220,7 +220,7 @@ $CDAO_Target = new CDAO_Target($DAO);
 					// Year							
 					echo "<fieldset>";
 					echo "<legend>Thứ </legend>";
-					echo "<a class='ladd' href='add_target.php?level=4' title='Thêm mục tiêu tuần '>Add target day </a>";
+					echo "<a class='ladd' href='add_target.php?level=4' title='Thêm mục ngày '>Add target day </a>";
 					echo '<form id="multi-delete" name="multi-delete" action="';
 					echo htmlentities($_SERVER['PHP_SELF']);
 					echo '" method="post">';

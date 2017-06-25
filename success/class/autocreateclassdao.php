@@ -61,5 +61,5 @@ function creatclassdao($class,$filename,$filedatabase,$namecm,$idcm){
 	echo $data;
 	updatefile($filename,$data);
 }
-//creatclassdao("CDAO_Food","CDAO_Food.php","tbl_food","Food","id_Giaovien");
+//creatclassdao("CDAO_ConfigDetail","CDAO_ConfigDetail.php","tbl_config_detail","ConfigDetail","id_Giaovien");
 ?>

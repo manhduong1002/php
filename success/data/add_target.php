@@ -3,8 +3,10 @@ session_start();
 require_once('../class/DAO.php');
 require_once('../class/CM_Target.php');
 require_once('../class/CM_Config.php');
+require_once('../class/CM_ConfigDetail.php');
 require_once('../class/CDAO_Target.php');
 require_once('../class/CDAO_Config.php');
+require_once('../class/CDAO_ConfigDetail.php');
 require_once('../class/CM_MessageRespone.php');
 require_once('../class/CJSON_MessageRespone.php');
 if(isset($_POST['cancel'])){
@@ -17,6 +19,7 @@ $page_title="Thêm mục tiêu";
 $DAO = new DAO();
 $CDAO_Target = new CDAO_Target($DAO);
 $CDAO_Config = new CDAO_Config($DAO);
+$CDAO_ConfigDetail = new CDAO_ConfigDetail($DAO);
 $CM_Config = $CDAO_Config->getConfig();
 include('includes/ql_header.php');
 $level = 0;
@@ -49,6 +52,7 @@ if($level-1 == 3){
 
 if($level > 0){
 	$dataTarget = $CDAO_Target->getTarget($level-1);
+	$dataConfigDetail = $CDAO_ConfigDetail->getConfigDetailByLevel($level);
 }
 ?>      
         <div id="center">
@@ -63,9 +67,22 @@ if($level > 0){
 							if(isset($_POST['parentId'])){
 								$parentId = $_POST['parentId'];
 							}
-							$CM_Target = new CM_Target(0,$level,$_POST['expiryDateHours'],$_POST['expiryDateDay'],$_POST['startDateHours'],$_POST['startDateDay'],$_POST['title'],$_POST['name'],$parentId,0,$_POST['thisconfig']);
+							if($level == 0){
+								$thisconfig = $_POST['thisconfig'];
+								$title = $startThisconfig." ".$_POST['thisconfig'];
+							}
+							else {
+								$configDetail = $CDAO_ConfigDetail->getConfigDetailById($_POST['thisconfig']);
+								$thisconfig = $configDetail->getThisconfig();
+								$title = $configDetail->GetName();
+							}
+							$CM_Target = new CM_Target(0,$level,$_POST['expiryDateHours'],$_POST['expiryDateDay'],$_POST['startDateHours'],$_POST['startDateDay'],$title,$_POST['name'],$parentId,0,$thisconfig);
                             $CDAO_Target->addTarget($CM_Target);
-							$mess = "<p class='mess-success'>Thêm mới mục tiêu thành công</p><a class='lmess' href='manager_target.php' title='trở lại trang quản lý mục tiêu'>Quay lại trang quản lý</a><a class='lmess' href='add_target.php' title='thêm mới thông tin mục tiêu'>Tiếp tục</a>";
+							$goaction ='add_target.php';
+							if($level > 0){
+								$goaction.='?level='.$level;
+							}
+							$mess = "<p class='mess-success'>Thêm mới mục tiêu thành công</p><a class='lmess' href='manager_target.php' title='trở lại trang quản lý mục tiêu'>Quay lại trang quản lý</a><a class='lmess' href=$goaction title='thêm mới thông tin mục tiêu'>Tiếp tục</a>";
 						}
                         if(!isset($mess) || !empty($miss) || isset($mess_ip) || isset($messip)){
                     ?>
@@ -78,7 +95,7 @@ if($level > 0){
 						
 						<p>
                             <label for="expiryDateHours">Giờ hết hạn (18:30:00) :</label>
-                            <input type="text"  class="validip" id="expiryDateHours" name="expiryDateHours" />
+                            <input type="text"  class="validip" id="expiryDateHours" name="expiryDateHours" value="22:00:00" readonly="readonly"/>
                         </p>   
 						
 						<p>
@@ -88,7 +105,7 @@ if($level > 0){
 						
 						<p>
                             <label for="startDateHours">Giờ bắt đầu (18:30:00) :</label>
-                            <input type="text"  class="validip" id="startDateHours" name="startDateHours" />
+                            <input type="text"  class="validip" id="startDateHours" name="startDateHours" value="05:30:00" readonly="readonly" />
                         </p>
                         <?php if($level>0){?>
 						<p>
@@ -105,16 +122,27 @@ if($level > 0){
 
                             </select>
 						</p>
-						<?php }?>
+						
+						<p>
+
+                            <label for="thisconfig">Thực hiện tại: </label>
+
+                            <select id="thisconfig" class="valid" name="thisconfig">
+
+                                <?php
+									for($i=0;$i<count($dataConfigDetail);$i++){
+										 echo "<option value='".$dataConfigDetail[$i]->GetId()."' >".$dataConfigDetail[$i]->GetThisconfig()." - ".$dataConfigDetail[$i]->GetName()."</option>";
+									}
+                                ?>
+
+                            </select>
+						</p>
+						<?php } else {?>
 						<p>
                             <label for="thisconfig"><?php echo $startThisconfig;?> :</label>
                             <input type="text"  class="validip" id="thisconfig" name="thisconfig" />
                         </p>
-						
-						<p>
-                            <label for="title">Tiêu đề mục tiêu (Năm 2017 Quý II) :</label>
-                            <input type="text"  class="validip" id="title" name="title" />
-                        </p>
+						<?php }?>
                         
 						<p>
                             <label for="name">Tên mục tiêu :</label>

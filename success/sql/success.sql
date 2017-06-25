@@ -2,10 +2,10 @@
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 23, 2017 lúc 07:34 SA
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 5.6.30
+-- Host: 127.0.0.1
+-- Generation Time: Jun 25, 2017 at 06:03 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `success`
+-- Database: `success`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_config`
+-- Table structure for table `tbl_config`
 --
 
 CREATE TABLE `tbl_config` (
@@ -37,16 +37,63 @@ CREATE TABLE `tbl_config` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_config`
+-- Dumping data for table `tbl_config`
 --
 
 INSERT INTO `tbl_config` (`Id`, `year`, `precious`, `month`, `week`, `day`, `thisday`) VALUES
-(1, 2017, 2, 6, 4, 6, '02/06/2017');
+(1, 2017, 2, 6, 4, 8, '02/06/2017');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_food`
+-- Table structure for table `tbl_config_detail`
+--
+
+CREATE TABLE `tbl_config_detail` (
+  `id` int(10) NOT NULL,
+  `level` int(2) NOT NULL,
+  `thisconfig` int(2) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_config_detail`
+--
+
+INSERT INTO `tbl_config_detail` (`id`, `level`, `thisconfig`, `name`) VALUES
+(1, 1, 1, 'Quý I'),
+(2, 1, 2, 'Quý II'),
+(3, 1, 3, 'Quý III'),
+(4, 1, 4, 'Quý IV'),
+(5, 2, 1, 'Tháng 1'),
+(6, 2, 2, 'Tháng 2'),
+(7, 2, 3, 'Tháng 3'),
+(8, 2, 4, 'Tháng 4'),
+(9, 2, 5, 'Tháng 5'),
+(10, 2, 6, 'Tháng 6'),
+(11, 2, 7, 'Tháng 7'),
+(12, 2, 8, 'Tháng 8'),
+(13, 2, 9, 'Tháng 9'),
+(14, 2, 10, 'Tháng 10'),
+(15, 2, 11, 'Tháng 11'),
+(16, 2, 12, 'Tháng 12'),
+(17, 3, 1, 'Tuần I'),
+(18, 3, 2, 'Tuần II'),
+(19, 3, 3, 'Tuần III'),
+(20, 3, 4, 'Tuần IV'),
+(21, 3, 5, 'Tuần V'),
+(22, 4, 2, 'Thứ 2'),
+(23, 4, 3, 'Thứ 3'),
+(24, 4, 4, 'Thứ 4'),
+(25, 4, 5, 'Thứ 5'),
+(26, 4, 6, 'Thứ 6'),
+(27, 4, 7, 'Thứ 7'),
+(28, 4, 8, 'Chủ nhật');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_food`
 --
 
 CREATE TABLE `tbl_food` (
@@ -60,7 +107,7 @@ CREATE TABLE `tbl_food` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_food`
+-- Dumping data for table `tbl_food`
 --
 
 INSERT INTO `tbl_food` (`id`, `name`, `nature`, `image`, `start`, `doing`, `materials`) VALUES
@@ -71,7 +118,7 @@ INSERT INTO `tbl_food` (`id`, `name`, `nature`, `image`, `start`, `doing`, `mate
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_material`
+-- Table structure for table `tbl_material`
 --
 
 CREATE TABLE `tbl_material` (
@@ -83,7 +130,7 @@ CREATE TABLE `tbl_material` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_material`
+-- Dumping data for table `tbl_material`
 --
 
 INSERT INTO `tbl_material` (`id`, `name`, `selection`, `color`, `nutrients`) VALUES
@@ -107,7 +154,7 @@ INSERT INTO `tbl_material` (`id`, `name`, `selection`, `color`, `nutrients`) VAL
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_target`
+-- Table structure for table `tbl_target`
 --
 
 CREATE TABLE `tbl_target` (
@@ -125,7 +172,7 @@ CREATE TABLE `tbl_target` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_target`
+-- Dumping data for table `tbl_target`
 --
 
 INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `startDateHours`, `startDateDay`, `title`, `name`, `parentId`, `status`, `thisconfig`) VALUES
@@ -255,7 +302,7 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (126, 4, '22:00:00', '20/06/2017', '05:30:00', '20/06/2017', 'Thứ 3', 'Học thuộc 3 đoạn Khai Thị Tiếng Trung', 124, 3, 3),
 (127, 4, '22:00:00', '21/06/2017', '05:30:00', '21/06/2017', 'Thứ 4', 'Học viết tiếng Trung hằng ngày', 117, 3, 4),
 (128, 4, '22:00:00', '21/06/2017', '05:30:00', '21/06/2017', 'Thứ 4', 'Học tiếng trung hàng tuần', 117, 3, 4),
-(129, 4, '22:00:00', '23/06/2017', '05:30:00', '23/06/2017', 'Thứ 6', 'Ăn sữa bí ngô', 121, 2, 6),
+(129, 4, '22:00:00', '23/06/2017', '05:30:00', '23/06/2017', 'Thứ 6', 'Ăn sữa bí ngô', 121, 3, 6),
 (130, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Thiết lập các tên miền và source web cho chân ngoài', 4, 0, 3),
 (131, 2, '22:00:00', '30/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Viết thành công app trò chơi cho Long', 130, 0, 7),
 (132, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Tìm hiểu và đẩy quảng cáo vào app android', 131, 0, 1),
@@ -263,60 +310,81 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (134, 3, '22:00:00', '16/07/2017', '05:30:00', '10/07/2017', 'Tuần III', 'Hoán vị các ảnh được một ảnh mới, tốc độ của ảnh', 131, 0, 3),
 (135, 3, '22:00:00', '23/07/2017', '05:30:00', '17/07/2017', 'Tuần IV', 'Fix bug nếu có và tạo bản verson 1', 131, 0, 4),
 (136, 3, '22:00:00', '30/07/2017', '05:30:00', '24/07/2017', 'Tuần V', 'Hoàn thiện và đưa Long bản demo', 131, 0, 5),
-(137, 4, '22:00:00', '22/06/2017', '05:30:00', '22/06/2017', 'Thứ 5', 'Tìm hiểu về tranh', 116, 3, 5);
+(137, 4, '22:00:00', '22/06/2017', '05:30:00', '22/06/2017', 'Thứ 5', 'Tìm hiểu về tranh', 116, 3, 5),
+(138, 4, '22:00:00', '24/06/2017', '05:30:00', '24/06/2017', 'Thứ 7', 'Cải thiện source mục tiêu', 124, 3, 7),
+(139, 0, '22:00:00', '31/12/2018', '05:30:00', '01/01/2018', 'Năm 2018', 'Phiên dịch tiếng Trung', 0, 0, 2018),
+(140, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Tăng lương ít nhất 15M', 34, 0, 3),
+(141, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Có sản phẩm, tăng tiền lương ngoài', 34, 0, 3),
+(142, 4, '22:00:00', '24/06/2017', '05:30:00', '24/06/2017', 'Thứ 7', 'Học tiếng Trung', 124, 3, 7),
+(143, 3, '22:00:00', '25/06/2017', '05:30:00', '19/06/2017', 'Tuần IV', 'Chuẩn bị tốt mọi thứ trước khi thực hiện', 15, 0, 4),
+(144, 4, '22:00:00', '25/06/2017', '05:30:00', '25/06/2017', 'Chủ nhật', 'Dọn nhà vệ sinh, quét phòng, sắp xếp mọi thứ ngăn nắp', 143, 0, 8),
+(145, 4, '22:00:00', '25/06/2017', '05:30:00', '25/06/2017', 'Chủ nhật', 'Học thuộc 3 thứ 1 âm bắc kinh, âm hán việt và chữ khai thị', 117, 0, 8),
+(146, 4, '22:00:00', '25/06/2017', '05:30:00', '25/06/2017', 'Chủ nhật', 'Học viết chữ tiếng Trung', 117, 0, 8),
+(147, 4, '22:00:00', '25/06/2017', '05:30:00', '25/06/2017', 'Chủ nhật', 'Cân nhà bà mười xem có đủ 58 kg không ?', 118, 0, 8);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `tbl_config`
+-- Indexes for table `tbl_config`
 --
 ALTER TABLE `tbl_config`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `tbl_food`
+-- Indexes for table `tbl_config_detail`
+--
+ALTER TABLE `tbl_config_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tbl_material`
+-- Indexes for table `tbl_material`
 --
 ALTER TABLE `tbl_material`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tbl_target`
+-- Indexes for table `tbl_target`
 --
 ALTER TABLE `tbl_target`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `tbl_config`
+-- AUTO_INCREMENT for table `tbl_config`
 --
 ALTER TABLE `tbl_config`
   MODIFY `Id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT cho bảng `tbl_food`
+-- AUTO_INCREMENT for table `tbl_config_detail`
+--
+ALTER TABLE `tbl_config_detail`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+--
+-- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã món ăn', AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT cho bảng `tbl_material`
+-- AUTO_INCREMENT for table `tbl_material`
 --
 ALTER TABLE `tbl_material`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Mã nguyên vật liệu', AUTO_INCREMENT=17;
 --
--- AUTO_INCREMENT cho bảng `tbl_target`
+-- AUTO_INCREMENT for table `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

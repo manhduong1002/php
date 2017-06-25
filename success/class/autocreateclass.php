@@ -85,7 +85,7 @@ function creatjsonclass($filenamedb,$filename,$find){
 	echo $data;
 	updatefile($filename,$data);
 }
-//getalldata("tbl_food","CM_Food","demo.php");
-//creatclass("CM_Food","CM_Food.php","tbl_food");
+//getalldata("tbl_config_detail","CM_ConfigDetail","demo.php");
+//creatclass("CM_ConfigDetail","CM_ConfigDetail.php","tbl_config_detail");
 //creatjsonclass("","json.php","Target");
 ?>
