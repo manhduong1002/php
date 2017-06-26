@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/tooltips.css" />
 
     <link rel="stylesheet" type="text/css" href="css/quanly.css" />
+	
+    <link rel="stylesheet" type="text/css" href="css/tree.css" />
 
 	<link rel="stylesheet" type="text/css" href="../css/datepicker.css" /> 
 
