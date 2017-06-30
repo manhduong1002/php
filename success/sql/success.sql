@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2017 at 07:02 AM
+-- Generation Time: Jun 30, 2017 at 06:21 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_config` (
 --
 
 INSERT INTO `tbl_config` (`Id`, `year`, `precious`, `month`, `week`, `day`, `thisday`) VALUES
-(1, 2017, 3, 7, 1, 2, '02/06/2017');
+(1, 2017, 3, 7, 1, 5, '02/06/2017');
 
 -- --------------------------------------------------------
 
@@ -321,16 +321,23 @@ INSERT INTO `tbl_target` (`id`, `level`, `expiryDateHours`, `expiryDateDay`, `st
 (145, 4, '22:00:00', '25/06/2017', '05:30:00', '25/06/2017', 'Chủ nhật', 'Học thuộc 3 thứ 1 âm bắc kinh, âm hán việt và chữ khai thị', 117, 3, 8),
 (146, 4, '22:00:00', '25/06/2017', '05:30:00', '25/06/2017', 'Chủ nhật', 'Học viết chữ tiếng Trung', 117, 3, 8),
 (147, 4, '22:00:00', '25/06/2017', '05:30:00', '25/06/2017', 'Chủ nhật', 'Cân nhà bà mười xem có đủ 58 kg không ?', 118, 3, 8),
-(148, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Ít nhất 60 kg', 56, 0, 7),
-(149, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Ăn đầy đủ chất dinh dưỡng', 148, 0, 1),
-(150, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Thành thạo viết tiếng Trung : Âm hán việt, âm bắc kinh, chữ cứng và nghĩa', 1, 0, 3),
-(151, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Tăng cường âm hán việt, âm bắc kinh và nghĩa', 150, 0, 7),
-(152, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Tra âm hán việt cho khai thị đạo nghĩa tiếng Trung', 151, 0, 1),
-(153, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Học thuộc khai thị tiếng trung 3 đoạn', 151, 0, 1),
+(148, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Ít nhất 60 kg', 56, 1, 7),
+(149, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Ăn đầy đủ chất dinh dưỡng', 148, 1, 1),
+(150, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Thành thạo viết tiếng Trung : Âm hán việt, âm bắc kinh, chữ cứng và nghĩa', 1, 1, 3),
+(151, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Tăng cường âm hán việt, âm bắc kinh và nghĩa', 150, 1, 7),
+(152, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Tra âm hán việt cho khai thị đạo nghĩa tiếng Trung', 151, 1, 1),
+(153, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Học thuộc khai thị tiếng trung 3 đoạn', 151, 1, 1),
 (154, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Tự tin khai thị Tam Bảo', 2, 0, 3),
-(155, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Thành công diễn lễ và 10 điều đại nguyện', 2, 0, 3),
-(156, 4, '22:00:00', '26/06/2017', '05:30:00', '26/06/2017', 'Thứ 2', 'Ăn sữa đậu nành', 149, 0, 2),
-(157, 4, '22:00:00', '26/06/2017', '05:30:00', '26/06/2017', 'Thứ 2', 'Học thuộc khai thị tiếng trung 3 đoạn', 153, 0, 2);
+(155, 1, '22:00:00', '30/09/2017', '05:30:00', '01/07/2017', 'Quý III', 'Thành công diễn lễ và 10 điều đại nguyện', 2, 1, 3),
+(156, 4, '22:00:00', '26/06/2017', '05:30:00', '26/06/2017', 'Thứ 2', 'Ăn sữa đậu nành', 149, 3, 2),
+(157, 4, '22:00:00', '26/06/2017', '05:30:00', '26/06/2017', 'Thứ 2', 'Học thuộc khai thị tiếng trung 3 đoạn', 153, 3, 2),
+(158, 4, '22:00:00', '27/06/2017', '05:30:00', '27/06/2017', 'Thứ 3', 'Học thuộc khai thị tiếng trung 3 đoạn', 153, 3, 3),
+(159, 2, '22:00:00', '31/07/2017', '05:30:00', '01/07/2017', 'Tháng 7', 'Thành thạo diễn lễ, ôn luyện 10 điều đại nguyện', 155, 1, 7),
+(160, 3, '22:00:00', '02/07/2017', '05:30:00', '26/06/2017', 'Tuần I', 'Ôn tập diễn lễ', 159, 1, 1),
+(161, 4, '22:00:00', '27/06/2017', '05:30:00', '27/06/2017', 'Thứ 3', 'Ôn tập diễn lễ', 160, 3, 3),
+(162, 4, '22:00:00', '28/06/2017', '05:30:00', '28/06/2017', 'Thứ 4', 'Ăn bánh', 149, 3, 4),
+(163, 4, '22:00:00', '30/06/2017', '05:30:00', '30/06/2017', 'Thứ 6', 'Tra âm hán việt cho khai thị đạo nghĩa tiếng Trung', 153, 0, 6),
+(164, 4, '22:00:00', '29/06/2017', '05:30:00', '29/06/2017', 'Thứ 5', 'Tra âm hán việt cho khai thị đạo nghĩa tiếng Trung', 152, 1, 5);
 
 --
 -- Indexes for dumped tables
@@ -394,7 +401,7 @@ ALTER TABLE `tbl_material`
 -- AUTO_INCREMENT for table `tbl_target`
 --
 ALTER TABLE `tbl_target`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
