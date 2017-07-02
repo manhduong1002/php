@@ -6,8 +6,6 @@ require_once('../class/CM_Target.php');
 require_once('../class/CM_Config.php');
 require_once('../class/CDAO_Target.php');
 require_once('../class/CDAO_Config.php');
-require_once('../class/CM_MessageRespone.php');
-require_once('../class/CJSON_MessageRespone.php');
 $page_title="Mục tiêu bản thân";
 include('includes/ql_header.php');
 $DAO = new DAO();

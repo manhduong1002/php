@@ -38,6 +38,30 @@ class CDAO_Target {
 		return $dataTarget;
 	}
 	
+	public function getAllTargetByLevel($level){
+		$sql_getall="SELECT * FROM `tbl_target` WHERE level = $level order by thisconfig desc, status desc";
+		$dataTarget=array();
+		$qurey=mysql_query($sql_getall);
+		$i=0;
+		while($row=mysql_fetch_array($qurey)){
+			$dataTarget[$i]=new CM_Target($row['id'],$row['level'],$row['expiryDateHours'],$row['expiryDateDay'],$row['startDateHours'],$row['startDateDay'],$row['title'],$row['name'],$row['parentId'],$row['status'],$row['thisconfig']);
+			$i++;
+		}
+		return $dataTarget;
+	}
+	
+	public function getAllTargetByParentId($parentId){
+		$sql_getall="SELECT * FROM `tbl_target` WHERE parentId = $parentId order by thisconfig desc, status desc";
+		$dataTarget=array();
+		$i = 0;
+		$qurey=mysql_query($sql_getall);
+		while($row=mysql_fetch_array($qurey)){
+			$dataTarget[$i]=new CM_Target($row['id'],$row['level'],$row['expiryDateHours'],$row['expiryDateDay'],$row['startDateHours'],$row['startDateDay'],$row['title'],$row['name'],$row['parentId'],$row['status'],$row['thisconfig']);
+			$i++;
+		}
+		return $dataTarget;
+	}
+	
 	public function getTargetById($id){
 		$sql_getall="SELECT * FROM `tbl_target` WHERE id = $id";
 		$qurey=mysql_query($sql_getall);

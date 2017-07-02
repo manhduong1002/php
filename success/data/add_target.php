@@ -7,8 +7,6 @@ require_once('../class/CM_ConfigDetail.php');
 require_once('../class/CDAO_Target.php');
 require_once('../class/CDAO_Config.php');
 require_once('../class/CDAO_ConfigDetail.php');
-require_once('../class/CM_MessageRespone.php');
-require_once('../class/CJSON_MessageRespone.php');
 if(isset($_POST['cancel'])){
     if(!headers_sent()){
         header("Location:manager_target.php");

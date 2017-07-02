@@ -4,8 +4,6 @@ session_start();
 require_once('../class/DAO.php');
 require_once('../class/CM_Target.php');
 require_once('../class/CDAO_Target.php');
-require_once('../class/CM_MessageRespone.php');
-require_once('../class/CJSON_MessageRespone.php');
 $page_title="Quản lý mục tiêu bản thân";
 include('includes/ql_header.php');
 $DAO = new DAO();
